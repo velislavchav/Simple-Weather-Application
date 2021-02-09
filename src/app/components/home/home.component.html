@@ -1,0 +1,30 @@
+<div class="newLogo" id="logo">
+  <p>Logo</p>
+</div>
+
+<section class="InputSection" *ngIf="!weatherInfo">
+  <legend>Enter name of a city and press search:</legend>
+  <input type="text" (keyup.enter)="getWeatherByCity()" [(ngModel)]="value">
+  <h3 *ngIf="error" class="error-message"> {{ error.toUpperCase() }} </h3>
+  <button (click)="getWeatherByCity()" [disabled]="value.length < 3" class="SearchButton">Search</button>
+</section>
+
+<ng-container *ngIf="weatherInfo && !error">
+  <section class="leftPart">
+    <h1>{{weatherInfo.city.name.toUpperCase()}}</h1>
+    <p>{{ currentDate }}</p>
+  </section>
+  <section class="rightPart">
+    <div class="imageHolder" [ngSwitch]="weatherInfo.list[0].weather[0].icon">
+      <img *ngSwitchCase="'02d' || '02n'" src="../../../assets/images/cloudy_sun.png" alt="Cloudy sun">
+      <img *ngSwitchCase="'03d' || '03n'" src="../../../assets/images/cloud.png" alt="Clouds">
+      <img *ngSwitchCase="'04d' || '04n'" src="../../../assets/images/rain.png" alt="Rain">
+      <img *ngSwitchCase="'05d' || '05n'" src="../../../assets/images/thunder.png" alt="Thunder">
+      <img *ngSwitchDefault src="../../../assets/images/sun.png" alt="Sun">
+    </div>
+    <h1> {{ weatherInfo.list[0].main.temp | temperatureConvertor}}</h1>
+    <p> {{weatherInfo.list[0].weather[0].main}} </p>
+  </section>
+  <app-search-result [weatherInfo]="weatherInfo"></app-search-result>
+</ng-container>
+

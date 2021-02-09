@@ -1,0 +1,145 @@
+.InputSection{
+  margin-top:18vh ;
+  margin-left: 30%;
+  width: 40%;
+}
+
+.InputSection legend{
+  color: #282828;
+  font-size: medium;
+  font-family: "Open Sans", Arial, sans-serif;
+}
+
+.InputSection input{
+  margin-top:2vh ;
+  width: 100%;
+  height: 4.5vh;
+  padding: 0.7vh;
+  font-size: 4vh;
+  font-family: "Open Sans", Arial, sans-serif;
+}
+
+.SearchButton{
+  text-align: center;
+  border: 0.5px solid rgba(0, 0, 0, 0.3);
+  width: 30%;
+  height: 9vh;
+  margin-left: 35%;
+  margin-top: 18vh;
+  background-color: #f9f9f9;
+  font-size: xx-large;
+  font-family: "Open Sans", Arial, sans-serif;
+}
+
+.SearchButton:hover{
+  background-color: #f1f1f1;
+}
+
+.SearchButton:focus{
+  background-color: #e3e3e3;
+}
+
+.newLogo{
+  text-align: center;
+  border: 1px solid black;
+  width: 15%;
+  height: 12vh;
+  margin-left: 42.5%;
+  margin-top: 4vh;
+}
+
+section.leftPart{
+  margin-top:6vh ;
+  display: inline-block;
+  width: 30%;
+  height: 20vh;
+  padding-left: 20%;
+}
+section.rightPart{
+  margin-top:6vh ;
+  display: inline-block;
+  width: 30%;
+  height: 20vh;
+  text-align: right;
+  padding-right: 8%;
+}
+section.rightPart h1 {
+  display: inline-block;
+}
+
+.imageHolder {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.imageHolder img {
+  max-width: 40px;
+}
+
+.error-message {
+  color: red;
+}
+
+@media only screen and (max-width: 767px) {
+   .InputSection{
+       margin-top:15vh ;
+       margin-left: 15%;
+       width: 70%;
+       height: 10vh;
+   }
+
+   .InputSection legend{
+       color: #282828;
+       font-size: 1.7vh;
+       font-family: "Open Sans", Arial, sans-serif;
+   }
+
+   .InputSection input{
+       border: 1px solid black;
+       margin-top:2vh ;
+       width: 100%;
+       height: 4vh;
+       padding: 0.7vh;
+       font-size: 4vh;
+       font-family: "Open Sans", Arial, sans-serif;
+   }
+
+   .SearchButton{
+       text-align: center;
+       border: 0.5px solid rgba(0, 0, 0, 0.3);
+       width: 42%;
+       height: 9vh;
+       margin-left: 27%;
+       margin-top: 17vh;
+       background-color: #f9f9f9;
+       font-size: 1em;
+       font-family: "Open Sans", Arial, sans-serif;
+   }
+
+   .SearchButton:hover{
+       background-color: #f1f1f1;
+   }
+
+   .SearchButton:focus{
+       background-color: #e3e3e3;
+   }
+
+   .newLogo{
+       text-align: center;
+       border: 1px solid black;
+       width: 35%;
+       height: 11vh;
+       margin-left: 32.5%;
+       margin-top: 4vh;
+   }
+
+   section.leftPart {
+     padding-left: 5%;
+     width: 40%;
+   }
+
+   section.rightPart {
+     width: 50%;
+     padding-right: 0;
+   }
+}
