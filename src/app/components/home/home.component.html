@@ -13,6 +13,7 @@
   <section class="leftPart">
     <h1>{{weatherInfo.city.name.toUpperCase()}}</h1>
     <p>{{ currentDate }}</p>
+    <p *ngIf="innerWidth <= 768"> {{weatherInfo.list[0].weather[0].main}} </p>
   </section>
   <section class="rightPart">
     <div class="imageHolder" [ngSwitch]="weatherInfo.list[0].weather[0].icon">
@@ -23,8 +24,9 @@
       <img *ngSwitchDefault src="../../../assets/images/sun.png" alt="Sun">
     </div>
     <h1> {{ weatherInfo.list[0].main.temp | temperatureConvertor}}</h1>
-    <p> {{weatherInfo.list[0].weather[0].main}} </p>
+    <p *ngIf="innerWidth > 768"> {{weatherInfo.list[0].weather[0].main}} </p>
   </section>
-  <app-search-result [weatherInfo]="weatherInfo"></app-search-result>
+  <app-search-result [weatherInfo]="weatherInfo" *ngIf="innerWidth > 768"></app-search-result>
+  <app-search-result-mobile [weatherInfo]="weatherInfo" *ngIf="innerWidth <= 768"></app-search-result-mobile>
 </ng-container>
 

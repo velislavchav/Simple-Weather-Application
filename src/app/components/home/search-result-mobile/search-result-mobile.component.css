@@ -1,0 +1,79 @@
+section h1{
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 8vh;
+}
+
+section p{
+  font-size: xx-large;
+}
+
+button{
+  width: 50%;
+  background-color: #f9f9f9;
+  border: 1px solid #e3e3e3;
+  height: 5vh;
+  margin: 0 25%;
+}
+
+#today{
+  margin: 0 auto;
+}
+
+table{
+  width: 100%;
+  margin-top: 5vh;
+}
+
+td{
+  width: 50%;
+  font-size: xx-large;
+}
+
+tr{
+  height: 7vh;
+}
+
+.rightCol{
+  text-align: right;
+}
+
+.twoDaysInfo{
+  width: 85%;
+  margin-left: 7.5%;
+}
+
+.twoDaysInfo tr{
+  display: flex;
+  height: 8vh;
+  padding-bottom: 2vh;
+  border-bottom:  1px solid;
+}
+
+.twoDaysInfo span{
+  font-size: medium;
+  display: block;
+}
+
+h6{
+  margin-bottom: 0;
+  margin-top: 1vh;
+  display: inline-block;
+}
+
+.info{
+  margin-bottom: 10vh;
+}
+
+.info .todayInfo {
+  width: 90%;
+  margin: 5vh 5%;
+}
+
+.imageHolder {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.imageHolder img {
+  max-width: 32px;
+}

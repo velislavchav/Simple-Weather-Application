@@ -52,14 +52,14 @@ section.leftPart{
   margin-top:6vh ;
   display: inline-block;
   width: 30%;
-  height: 20vh;
+  max-height: 20vh;
   padding-left: 20%;
 }
 section.rightPart{
   margin-top:6vh ;
   display: inline-block;
   width: 30%;
-  height: 20vh;
+  max-height: 20vh;
   text-align: right;
   padding-right: 8%;
 }
@@ -141,5 +141,6 @@ section.rightPart h1 {
    section.rightPart {
      width: 50%;
      padding-right: 0;
+     max-height: 0;
    }
 }

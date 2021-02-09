@@ -6,6 +6,7 @@ import { SearchResultComponent } from './search-result/search-result.component';
 import { TemperatureConvertorPipe } from 'src/app/helpers/pipes/temperature-convertor.pipe';
 import { GetdayPipe } from 'src/app/helpers/pipes/getday.pipe';
 import { GethoursPipe } from 'src/app/helpers/pipes/gethours.pipe';
+import { SearchResultMobileComponent } from './search-result-mobile/search-result-mobile.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { GethoursPipe } from 'src/app/helpers/pipes/gethours.pipe';
     SearchResultComponent,
     TemperatureConvertorPipe,
     GetdayPipe,
-    GethoursPipe
+    GethoursPipe,
+    SearchResultMobileComponent
   ],
   imports: [
     CommonModule,

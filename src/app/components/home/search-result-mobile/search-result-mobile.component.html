@@ -1,0 +1,41 @@
+
+<article class="info" *ngIf="displayedSection == 'today'">
+  <table class="todayInfo">
+    <tr>
+      <td>Feels like</td>
+      <td class="rightCol"> {{ weatherInfo.list[0].main.feels_like | temperatureConvertor}} </td>
+    </tr>
+    <tr>
+      <td>Wind</td>
+      <td class="rightCol">{{ weatherInfo.list[0].wind.speed }} km/h </td>
+    </tr>
+    <tr>
+      <td>Humidity</td>
+      <td class="rightCol"> {{ weatherInfo.list[0].main.feels_like }} %</td>
+    </tr>
+  </table>
+</article>
+
+<article class="info" *ngIf="displayedSection == '48hours'">
+  <table class="twoDaysInfo">
+    <tr *ngFor="let weatherDetails of weatherInfo.list">
+      <td *ngIf="displayedSection == '48hours'">
+        <h6>{{ weatherDetails.dt_txt | gethours }}</h6>
+        <span>{{ weatherDetails.dt_txt| getday }}</span>
+      </td>
+      <td class="rightCol">
+        <div class="imageHolder" [ngSwitch]="weatherDetails.weather[0].icon">
+          <img *ngSwitchCase="'02d' || '02n'" src="../../../assets/images/cloudy_sun.png" alt="Cloudy sun">
+          <img *ngSwitchCase="'03d' || '03n'" src="../../../assets/images/cloud.png" alt="Clouds">
+          <img *ngSwitchCase="'04d' || '04n'" src="../../../assets/images/rain.png" alt="Rain">
+          <img *ngSwitchCase="'05d' || '05n'" src="../../../assets/images/thunder.png" alt="Thunder">
+          <img *ngSwitchDefault src="../../../assets/images/sun.png" alt="Sun">
+        </div>
+        <h6>{{ weatherDetails.main.temp | temperatureConvertor }}</h6>
+        <span>{{weatherDetails.weather[0].main}}</span>
+      </td>
+    </tr>
+  </table>
+</article>
+
+<button (click)="changeSection('48hours')" *ngIf="displayedSection == 'today'">48 Hours Forecast</button>

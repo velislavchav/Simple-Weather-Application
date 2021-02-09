@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { IWeather } from 'src/app/helpers/interfaces/IWeather';
 
 @Component({
@@ -6,15 +6,12 @@ import { IWeather } from 'src/app/helpers/interfaces/IWeather';
   templateUrl: './search-result.component.html',
   styleUrls: ['./search-result.component.css']
 })
-export class SearchResultComponent implements OnInit {
+export class SearchResultComponent {
   @Input() weatherInfo: IWeather;
   displayedSection = "today";
   constructor() { }
 
   changeSection(section) {
     this.displayedSection = section;
-  }
-
-  ngOnInit(): void {
   }
 }
